@@ -25,3 +25,7 @@ WeakMap.prototype.delete = function(key){
 WeakMap.prototype.clear = function(){
 	this.map = {};
 }
+
+WeakMap.prototype.keys = function(){
+	return Object.keys(this.map);
+}
