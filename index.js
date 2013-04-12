@@ -18,6 +18,9 @@ WeakMap.prototype.set = function(key,value){
 }
 WeakMap.prototype.delete = function(key){
 	delete this.map[key];
+	if(this.ondelete){
+		this.ondelete(key);
+	}
 }
 WeakMap.prototype.clear = function(){
 	this.map = {};
